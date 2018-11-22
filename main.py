@@ -1,6 +1,6 @@
 import random
 animals_all = []
-class Animals:
+class Animal:
     health = 'normal'
     sound = ''
     def __init__(self, name):
@@ -31,12 +31,12 @@ class Animals:
         return self.weight > other.weight
 
 
-class Geese(Animals):
+class Goose(Animal):
     satiety = random.randrange(0, 101)  # % сытости на момент создания объекта
     sound = 'GA-GA'
     weight = random.randrange(5000, 8000)
 
-class Cows(Animals):
+class Cow(Animal):
     satiety = random.randrange(0, 101)  # % сытости на момент создания объекта
     sound = 'MU-MU'
     weight = random.randrange(400000, 600000)
@@ -48,17 +48,17 @@ class Cows(Animals):
             print('Ваша живность скончалась. Но это не повод не доиться ;)')
 
 
-class Sheeps(Animals):
+class Sheep(Animal):
     satiety = random.randrange(0, 101)  # % сытости на момент создания объекта
     sound = 'ME-ME'
     weight = random.randrange(70000, 80000)
 
-class Chickens(Animals):
+class Chicken(Animal):
     satiety = random.randrange(0, 101)  # % сытости на момент создания объекта
     sound = 'KO-KO'
     weight = random.randrange(3000, 4000)
 
-class Goats(Animals):
+class Goat(Animal):
     satiety = random.randrange(0, 101)  # % сытости на момент создания объекта
     sound = 'BE-BE'
     weight = random.randrange(50000, 150000)
@@ -69,48 +69,48 @@ class Goats(Animals):
         elif mode == 'milk' and self.health == 'death':
             print('Ваша живность скончалась. Но это не повод не доиться ;)')
 
-class Ducks(Animals):
+class Duck(Animal):
     satiety = random.randrange(0, 101)  # % сытости на момент создания объекта
     sound = 'Krya-Krya'
     weight = random.randrange(700, 1600)
 
-gees1 = Geese('Серый')
+gees1 = Goose('Серый')
 gees1.eating()
 gees1.service('eggs')
 
-gees2 = Geese('Белый')
+gees2 = Goose('Белый')
 gees2.eating()
 gees2.service('eggs')
 
-cow = Cows('Манька')
+cow = Cow('Манька')
 cow.eating()
 cow.service('milk')
 
-sheep1 = Sheeps('Барашек')
+sheep1 = Sheep('Барашек')
 sheep1.eating()
 sheep1.service('shave')
 
-sheep2 = Sheeps('Кудрявый')
+sheep2 = Sheep('Кудрявый')
 sheep2.eating()
 sheep2.service('shave')
 
-chicken1 = Chickens('Ко-Ко')
+chicken1 = Chicken('Ко-Ко')
 chicken1.eating()
 chicken1.service('eggs')
 
-chicken2 = Chickens('Кукареку')
+chicken2 = Chicken('Кукареку')
 chicken2.eating()
 chicken2.service('eggs')
 
-goat1 = Goats('Рога')
+goat1 = Goat('Рога')
 goat1.eating()
 goat1.service('milk')
 
-goat2 = Goats('Копыта')
+goat2 = Goat('Копыта')
 goat2.eating()
 goat2.service('milk')
 
-duck = Ducks('Кряква')
+duck = Duck('Кряква')
 duck.eating()
 duck.service('eggs')
 
